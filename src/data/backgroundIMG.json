@@ -1,0 +1,18 @@
+[
+    { 
+        "src": "../img/motos/piaggio_beverly_125.avif", 
+    "caption": "Caption Text" 
+},
+    { 
+        "src": "../img/motos/mh_vince_125.avif", 
+    "caption": "Caption Text" 
+},
+    { 
+        "src": "../img/motos/yamaha_n-max_125.avif", 
+        "caption": "Caption Text"  
+    },
+    { 
+        "src": "../img/hightseason.png", 
+        "caption": "Caption Text"  
+    }
+  ]

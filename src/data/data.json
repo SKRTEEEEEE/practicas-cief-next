@@ -1,0 +1,196 @@
+[
+  {
+    "nombre": "mh vince 125cc",
+    "descripcion": {
+      "es": "Scooter neo-retro, su estilo vintage se combina con las soluciones tecnológicas más actuales. Diseñada para ofrecer la máxima eficiencia con un consumo mínimo de combustible de 2,8 litros a los 100 km. Con un peso de 115 kg la convierte en una motocicleta muy ágil y con una amplia manejabilidad, especialmente para conducción urbana.",
+      "en": "Neo-retro scooter, its vintage style is combined with the most up-to-date technological solutions. Designed to offer maximum efficiency with a minimum fuel consumption of 2.8 liters per 100 km. With a weight of 115 kg it makes it a very agile motorcycle with ample handling, especially for urban driving.",
+      "fr": "Scooter aux lignes néo-rétro, son style vintage se conjugue aux solutions technologiques les plus actuelles. pensant offrir une efficacité maximale avec une consommation minimale de carburant de 2,8 litres aux 100 km. Avec un poids de 115 kg, cela en fait une moto très agile et facile à conduire. Spécial pour la conduite urbaine."
+    },
+    "tipo": "moto",
+    "fianza": 300,
+    "precio": 50,
+    "foto":{
+      "1": "/img/motos/mh_vince_125.avif",
+      "2": "/img/motos/mh_vince_125_1.avif"
+  }
+  },
+  {
+    "nombre": "piagio bervely 125cc",
+    "descripcion": {
+      "es": "Piaggio Bervely 125cc, es un scooter urbano diseñado para ofrecer comodidad, eficiencia y estilo. Este modelo se caracteriza por su motor de 125cc, 4 tiempos, refrigerado por líquido, que proporciona un buen equilibrio entre potencia y consumo de combustible, ideal para los desplazamientos diarios por la ciudad.",
+      "en": "Piaggio Bervely 125cc, is an urban scooter designed to offer comfort, efficiency and style. This model is characterized by its 125cc, 4-stroke, liquid-cooled engine, which provides a good balance between power and fuel consumption, ideal for daily commuting around the city.",
+      "fr": "Piaggio Bervely 125cc est un scooter urbain conçu pour offrir confort, efficacité et style. Ce modèle se caractérise par son moteur 125cc 4 temps refroidi par liquide, qui offre un bon équilibre entre puissance et consommation de carburant, idéal pour les déplacements quotidiens. la ville."
+    },
+    "tipo": "moto",
+    "fianza": 300,
+    "precio": 50,
+    "foto":{
+      "1": "/img/motos/piaggio_beverly_125.avif",
+      "2": "/img/motos/piaggio_beverly_125_1.avif"
+  }
+  },
+  {
+    "nombre": "sym jet 14 125cc",
+    "descripcion": {
+      "es": "Scooter de 125cc con acabados modernos, lo que le permite conseguir una ergonomía y unas cualidades dinámicas superiores que la hacen ágil y manejable. Motor de 11Cv, con un interesante rendimiento a bajas revoluciones, lo que la convierte en una buena opción para trayectos urbanos, alcanzando una velocidad máxima de 105 km/h.",
+      "en": "125cc scooter with modern finishes, which allows it to achieve superior ergonomics and dynamic qualities to make it agile and manageable. 11Hp engine, with an interesting performance at low revolutions. Making it a good option for urban journeys. Reaching a maximum speed of 105 km/h.",
+      "fr": "Scooter 125cc, avec des finitions modernes, cela lui permet d'atteindre une ergonomie et des qualités dynamiques supérieures pour qu'il soit agile et maniable. Moteur de 11 CV, avec des performances intéressantes à bas régime. devenant une bonne option pour les déplacements urbains. atteignant une vitesse maximale de 105 km/h."
+    },
+    "tipo": "moto",
+    "fianza": 300,
+    "precio": 50,
+    "foto":{
+      "1": "/img/motos/sym_jet_14_125.png",
+      "2": "/img/motos/sym_jet_14_125_1.png"
+  }
+  },
+  {
+    "nombre": "benelli trk 502",
+    "descripcion": {
+      "es": "Motor bicilíndrico de 4 tiempos refrigerado por agua, que entrega 48 CV de potencia. Perfecto para el carnet A2. 47,6 CV a 8.500 rpm y una velocidad máxima de 175 km/h. especialmente para rutas extraurbanas.",
+      "en": "4-stroke, water-cooled, twin-cylinder engine, delivering 48 HP. Perfect for the A2 license. 47.6 HP at 8500 rpm with a maximum speed of 175 km/h. Especially for extra-urban routes.",
+      "fr": "Moteur bicylindre 4 temps refroidi par eau, qui délivre une puissance de 48 CV. Parfait pour le permis A2. 47,6 CV à 8 500 tr/min avec une vitesse maximale de 175 km/h. surtout pour les itinéraires extra-urbains."
+    },
+    "tipo": "moto",
+    "fianza": 800,
+    "precio": 90,
+    "foto":{
+      "1": "/img/motos/benelli_trk_502_x.avif",
+      "2": "/img/motos/benelli_trk_502_x_2.png"
+  }
+  },
+  {
+    "nombre": "sym symphony sr 125",
+    "descripcion": {
+      "es": "Su motor Euro 5 garantiza unas excelentes prestaciones, un consumo mínimo y bajas emisiones para circular por ciudad de forma sostenible. El motor de 12 CV a 7500 rpm ofrece una velocidad máxima de 105 km/h. Ofrece suficiente espacio debajo del asiento y por si fuera poco, lleva integrado un baúl superior.",
+      "en": "Its Euro 5 engine guarantees excellent performance, minimum fuel consumption and low emissions to move around the city in a sustainable way. The 12 HP engine at 7500 rpm offers a maximum speed of 105 km/h. It offers ample space under the seat and if that is not enough, it has a built-in top case.",
+      "fr": "Son moteur Euro 5 garantit d'excellentes performances, une consommation minimale et un faible niveau d'émissions pour se déplacer en ville de manière durable. Le moteur 12CV à 7500 tr/min offre une vitesse maximale de 105km/h. Il offre suffisamment d'espace sous le siège et si cela ne suffit pas, il dispose d'un top case intégré."
+    },
+    "tipo": "moto",
+    "fianza": 300,
+    "precio": 50,
+    "foto":{
+      "1": "/img/motos/sym_symphony_125_sr.png",
+      "2": "/img/motos/sym_symphony_125_sr_1.png"
+  }
+  },
+  {
+    "nombre": "suzuki burgman 125",
+    "descripcion":{
+      "es": "Burgman 125cc, compacta y ágil, para circular eficientemente por las carreteras de las grandes ciudades, proporcionando una conducción totalmente eficiente. Tiene una potencia de 8,6 CV y ​​alcanza fácilmente una velocidad máxima de 120 km/h, aportando estabilidad en todo momento gracias a su peso.",
+      "en": "Burgman 125cc, compact and agile, to efficiently travel the roads of large cities, offering a totally efficient driving. It has a power of 8.6 HP and reaches a maximum speed of 120 km/h with ease, and offering stability at all times thanks to its weight.",
+      "fr": "Burgman 125cc, compact et agile, pour naviguer efficacement sur les routes des grandes villes, offrant une conduite totalement efficace. Il a une puissance de 8,6 CV et atteint facilement une vitesse maximale de 120 km/h, offrant une stabilité à tout moment grâce à son poids."
+    },
+    "tipo": "moto",
+    "fianza": 300,
+    "precio": 50,
+    "foto":{
+      "1": "/img/motos/suzuki_burgman_125.png",
+      "2": "/img/motos/suzuki_burgman_125_1.png"
+  }
+  },
+  {
+    "nombre": "kymco k-xct 125",
+    "descripcion": {
+      "es": "Es una scooter de 125cc, con un estilo deportivo, ideal tanto para uso en ciudad como para salidas extraurbanas. Motor de 4 tiempos con una potencia máxima de 14,5 CV a 9.000 rpm. capaz de alcanzar una velocidad máxima de 117 km/h.",
+      "en": "It is a 125cc, sporty style scooter, ideal for use in the city as well as for extra-urban trips. 4-stroke engine with a maximum power of 14.5 HP at 9000 rpm. It can reach a maximum speed of 117 km/h.",
+      "fr": "C'est un scooter 125cc, au style sportif, idéal pour une utilisation en ville comme pour des sorties extra-urbaines. Moteur 4 temps d'une puissance maximale de 14,5 CV à 9 000 tr/min. pouvant atteindre une vitesse maximale de 117 km/h."
+    },
+    "tipo": "moto",
+    "fianza": 300,
+    "precio": 50,
+    "foto":{
+      "1": "/img/motos/kymco_k-xct_125.png",
+      "2": "/img/motos/kymco_k-xct_125_2.png"
+  }
+  },
+  {
+    "nombre": "yamaha n-max 125",
+    "descripcion": {
+      "es": "La carrocería deportiva y dinámica del N-max 125cc cuenta con elegantes luces LED delanteras y traseras. Carenado aerodinámico que ofrece una mejor protección contra el viento y la lluvia. La ergonomía y la maniobrabilidad le permiten moverse cómodamente. Moto de 125cc con 12,2 CV, que puede alcanzar una velocidad de 117 km/h.",
+      "en": "The sporty and dynamic bodywork of the N-max 125cc, has elegant front and rear LED lights. Aerodynamic fairing that offers greater protection against wind and rain. Ergonomics and maneuverability make it comfortable to move with. 125cc motorcycle with 12.2 HP, which allows it to reach a speed of 117 km / h.",
+      "fr": "La carrosserie sportive et dynamique du N-max 125cc est dotée d'élégants feux avant et arrière à LED. Carénage aérodynamique qui offre une meilleure protection contre le vent et la pluie. L'ergonomie et la maniabilité permettent de se déplacer confortablement. Moto de 125cc avec 12,2CV, qui permet d'atteindre une vitesse de 117km/h."
+    },
+    "tipo": "moto",
+    "fianza": 300,
+    "precio": 50,
+    "foto":{
+      "1": "/img/motos/yamaha_n-max_125.avif",
+      "2": "/img/motos/yamaha_n-max_125_1.avif"
+  }
+  },
+  {
+    "nombre": "peugeot tweet gt 50",
+    "descripcion": {
+      "es": "Scooter de 50 cc, considerado el mejor ciclomotor de ruedas altas en cuanto a maniobrabilidad y ligereza. Motor de 3CV, que le permite alcanzar una velocidad máxima de 50km/h.",
+      "en": "50cc scooter, considered the best high-wheeled moped in terms of maneuverability and lightness. 3CV engine, which allows it to reach a maximum speed of 50km/h.",
+      "fr": "Scooter 50cc, considéré comme le meilleur cyclomoteur à roues hautes en termes de maniabilité et de légèreté. Moteur 3CV, qui lui permet d'atteindre une vitesse maximale de 50km/h."
+    },
+    "tipo": "moto",
+    "fianza": 300,
+    "precio": 35,
+    "foto":{
+      "1": "/img/motos/peugeot_tweet_50_gt.png",
+      "2": "/img/motos/peugeot_tweet_50_gt_1.png"
+  }
+  },
+  {
+    "nombre": "daelim s3 125",
+    "descripcion": {
+      "es": "Scooter versátil y moderno con un diseño innovador. Motor de 125cc de 4 tiempos con inyección electrónica y refrigeración líquida. ideal para grandes ciudades y zonas extraurbanas. Tiene una potencia de 14CV, lo que le permite alcanzar una velocidad de 120km/h.",
+      "en": "versatile, modern scooter with a novel design. 125cc 4-stroke liquid-cooled, electronically-injected engine. Ideal for large cities and extra-urban areas. It has a power of 14HP, which allows it to reach a speed of 120km/h.",
+      "fr": "Scooter polyvalent et moderne au design novateur. Moteur 125cc 4 temps à injection électronique et refroidissement liquide. idéal pour les grandes villes et les zones extra-urbaines. Il a une puissance de 14CV, ce qui lui permet d'atteindre une vitesse de 120km/h."
+    },
+    "tipo": "moto",
+    "fianza": 300,
+    "precio": 50,
+    "foto":{
+      "1": "/img/motos/daelim_s3_125.png",
+      "2": "/img/motos/daelim_s3_125_1.png"
+  }
+  }, 
+  {
+    "nombre": "Bicicleta de Montanha",
+    "descripcion": "aqui va una breve descripcion del vehiculo",
+    "tipo": "bicicleta",
+    "fianza": 300,
+    "precio": 50,
+   "foto":{
+           "1": "/img/motos/daelim_s3_125.png",
+      "2": "/img/motos/daelim_s3_125_1.png"
+  }
+  },
+  {
+    "nombre": "Bicicleta de Montanha",
+    "descripcion": "aqui va una breve descripcion del vehiculo",
+    "tipo": "bicicleta",
+    "fianza": 300,
+    "precio": 50,
+    "foto":{
+      "1": "/img/motos/daelim_s3_125.png",
+      "2": "/img/motos/daelim_s3_125_1.png"
+  }
+  },
+  {
+    "nombre": "Bicicleta de Montanha",
+    "descripcion": "aqui va una breve descripcion del vehiculo",
+    "tipo": "bicicleta",
+    "fianza": 300,
+    "precio": 50,
+    "foto":{
+      "1": "/img/motos/daelim_s3_125.png",
+      "2": "/img/motos/daelim_s3_125_1.png"
+  }
+  },
+  {
+    "nombre": "Bicicleta de Montanha",
+    "descripcion": "aqui va una breve descripcion del vehiculo",
+    "tipo": "bicicleta",
+    "fianza": 300,
+    "precio": 50,
+    "foto":{
+      "1": "/img/motos/daelim_s3_125.png",
+      "2": "/img/motos/daelim_s3_125_1.png"
+  }
+  }
+]
