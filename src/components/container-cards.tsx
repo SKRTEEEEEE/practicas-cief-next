@@ -8,7 +8,8 @@ import "../../public/css/boton-selector.css"
 import data from "../data/data.json"
 
 import Image from "next/image";
-const formatDate = (dateString) => {
+import { VehicleOld } from "@/types";
+const formatDate = (dateString: string) => {
     if (!dateString) return "";
     const [year, month, day] = dateString.split("-");
     return `${day}-${month}-${year}`;
@@ -23,14 +24,14 @@ export const ContainerCards = () => {
   //Recoje las fechas como un estado ℹ️
   const itemsToShow = show === "motos" ? motos : bicicletas;
 
-  const [selectedVehicle, setSelectedVehicle] = useState(null);
-  const handleCardClick = (vehicle) => setSelectedVehicle(vehicle);
+  const [selectedVehicle, setSelectedVehicle] = useState<VehicleOld|null>(null);
+  const handleCardClick = (vehicle: VehicleOld) => setSelectedVehicle(vehicle);
   const closePopup = () => setSelectedVehicle(null);
-  const [selectedLanguage, setSelectedLanguage] = useState("es");
-  const changeLanguage = (lang) => setSelectedLanguage(lang);
+  const [selectedLanguage, setSelectedLanguage] = useState<"es"|"en"|"fr">("es");
+  const changeLanguage = (lang: "es"|"en"|"fr") => setSelectedLanguage(lang);
   const [numeroFoto, setNumeroFoto] = useState(1);
 
-  const [dates, setDates] = useState({}); // Estado para armazenar datas por índice
+  const [dates, setDates] = useState<Record<string, string>>({}); // Estado para armazenar datas por índice
 
   const [currentImageIndexes, setCurrentImageIndexes] = useState(
     new Array(itemsToShow.length).fill(0)
@@ -45,7 +46,7 @@ export const ContainerCards = () => {
     return `${year}-${month}-${day}`;
   };
 
-  const fotoChange = (val) => {
+  const fotoChange = (val: number) => {
     const totalFotos = Object.keys(selectedVehicle?.foto || {}).length;
     if (val < totalFotos) {
       return val + 1;
@@ -53,20 +54,20 @@ export const ContainerCards = () => {
       return 1;
     }
   };
-  const handleFechaInicioChange = (index, value) => {
+  const handleFechaInicioChange = (index:number, value:string) => {
     setDates((prevDates) => ({
       ...prevDates,
       [`start-${index}`]: value,
     }));
   };
 
-  const handleFechaTerminoChange = (index, value) => {
+  const handleFechaTerminoChange = (index:number, value:string) => {
     setDates((prevDates) => ({
       ...prevDates,
       [`end-${index}`]: value,
     }));
   };
-  const handleNextPhoto = (index, photos) => {
+  const handleNextPhoto = (index:number, photos: string[]) => {
     setCurrentImageIndexes((prevIndexes) => {
       const newIndexes = [...prevIndexes];
       newIndexes[index] =
@@ -75,7 +76,7 @@ export const ContainerCards = () => {
     });
   };
 
-  const handlePreviousPhoto = (index, photos) => {
+  const handlePreviousPhoto = (index:number, photos:string[]) => {
     setCurrentImageIndexes((prevIndexes) => {
       const newIndexes = [...prevIndexes];
       newIndexes[index] =
@@ -151,10 +152,14 @@ export const ContainerCards = () => {
                         id={`fechaInicio-${index}`}
                         value={dates[`start-${index}`] || ""}
                         onChange={(e) => {
-                        const fechaInicio = e.target.value;
-                        handleFechaInicioChange(index, fechaInicio);
-                        // Define o mínimo da data de término como a data de início
-                        document.getElementById(`fechaTermino-${index}`).min = fechaInicio;
+                          const fechaInicio = e.target.value;
+                          handleFechaInicioChange(index, fechaInicio);
+                          
+                          // Define el mínimo de la fecha de término como la fecha de inicio, solo si el elemento existe
+                          const fechaTerminoInput = document.getElementById(`fechaTermino-${index}`) as HTMLInputElement | null;
+                          if (fechaTerminoInput) {
+                            fechaTerminoInput.min = fechaInicio;
+                          }
                         }}
                         required
                         min={getCurrentDate()} // Bloqueia datas anteriores a hoje
