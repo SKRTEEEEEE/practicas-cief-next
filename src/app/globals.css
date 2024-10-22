@@ -321,9 +321,7 @@ img {
     padding: 1rem 2rem;
     margin-bottom: 2rem;
   }
-  .container {
-    gap: 1rem;
-  }
+
 
   footer {
     padding: 1rem;
@@ -442,9 +440,6 @@ img {
     right: 35px;
   }
 
-  .container {
-    gap: 2rem;
-  }
   /* FOOTER */
   footer {
     padding: 1rem;

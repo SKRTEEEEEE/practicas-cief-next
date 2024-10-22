@@ -1,9 +1,11 @@
-import Vehicles from "../components/vehicles"
+import { SlideImage } from "@/components/slide-img";
+import { ContainerCards } from "@/components/container-cards";
 
 export default function Page() {
     return (
-        <div>
-            <Vehicles/>
-        </div>
+        <>
+            <SlideImage/>
+            <ContainerCards/>
+        </>
     );
 }
