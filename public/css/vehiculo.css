@@ -1,0 +1,57 @@
+section {
+  /* background-color: green; */
+}
+
+.titulo-vehiculo {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.container-vehiculo {
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.imagen-vehiculo {
+  width: 49%;
+  img {
+    width: 100%;
+    border-radius: 20px;
+    border: 2px solid black;
+  }
+}
+
+.informacion-vehiculo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 49%;
+  border-radius: 20px;
+  border: 2px solid black;
+  padding: 50px;
+}
+
+.fechas-reserva-vehiculo {
+  display: flex;
+  width: 80%;
+  justify-content: space-around;
+  p {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 30%;
+    height: 2rem;
+    text-align: center;
+    align-content: center;
+  }
+}
+
+button {
+  width: 40%;
+  height: 2.2rem;
+  font-size: 1.5rem;
+}

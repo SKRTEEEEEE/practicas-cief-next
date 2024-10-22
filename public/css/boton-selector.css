@@ -1,0 +1,36 @@
+.selector-vehiculos {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+.button-motos,
+.button-bicis {
+  width: 250px;
+  height: 40px;
+  font-size: 1rem;
+  margin: 0 3px;
+  background-color: white;
+  border: 2px solid black;
+  transition: 0.2s;
+}
+
+.button-motos {
+  border-radius: 10px 0 0 10px;
+}
+.button-motos:hover {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  scale: 1.05;
+}
+
+.button-bicis {
+  border-radius: 0 10px 10px 0;
+}
+.button-bicis:hover {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  scale: 1.05;
+}

@@ -1,0 +1,157 @@
+/* --------------------- Seccion vehiculos disponibles -----------------------*/
+.disp-container {
+  width: 100%;
+  height: auto;
+  padding: 3rem 4rem;
+  margin-bottom: 2rem;
+}
+
+.icono-wsp {
+  width: 25px;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 200px;
+  width: 280px;
+  overflow: hidden;
+}
+
+.container {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+/* Card de cada vehiculo */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* border: 1px solid #ccc; */
+  border-radius: 8px;
+  padding: 10px;
+  width: 300px;
+  height: 450px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 5px;
+}
+.h3-disp {
+  font-size: 19px;
+}
+input {
+  border: none;
+}
+/* A imagem deve ocupar o topo da card */
+.img-disp {
+  width: 100%;
+  height: 100%; /* Definir altura para garantir que as imagens sejam proporcionais */
+  object-fit: cover; /* Garantir que a imagem preencha o espaço adequadamente */
+  border-radius: 8px;
+}
+.image-controls {
+  width: 100%;
+  display: flex;
+  position: relative;
+  top: -100px;
+  justify-content: space-between;
+}
+.btn-control {
+  background-color: transparent;
+  border: none;
+  color: transparent;
+  width: 15px;
+}
+
+/* Conteúdo textual da card */
+.info-card {
+  flex-grow: 1;
+  padding: 10px 0;
+}
+.info-card,
+p,
+input,
+label {
+  margin-top: 5px;
+}
+
+/* Botão fixo na parte inferior da card */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: auto; /* Faz o botão ir para o fim da card */
+}
+.button-container a {
+  text-decoration: none;
+}
+.btn-disp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 10px 20px;
+  margin: 7px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 40%;
+}
+.btn-disp:hover {
+  scale: 1.1;
+  transition: background-color 0.3s ease;
+}
+
+.fecha-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+/* --------------------------- Medias -------------------------- */
+@media (max-width: 1068px) {
+  .img-disp {
+    width: 80%;
+  }
+  .image-controls {
+    height: 20px;
+  }
+  .btn-control {
+    font-size: 1rem;
+  }
+  .h3-disp {
+    font-size: 1rem;
+  }
+
+  .card {
+    height: 400px;
+  }
+
+  .btn-disp {
+    padding: 8px 20px;
+    margin: 0px 7px;
+    font-size: 0.9rem;
+  }
+
+  .info-card,
+  p,
+  input,
+  label {
+    font-size: 0.8rem;
+    margin-top: 5px;
+  }
+
+  .icono-wsp {
+    width: 20px;
+  }
+}

@@ -1,3 +1,5 @@
+"use client"
+
 // Archivo: components/VehicleCard.tsx
 
 import { useState } from "react";
@@ -9,6 +11,7 @@ const formatDate = (dateString:string) => {
     const [year, month, day] = dateString.split("-");
     return `${day}-${month}-${year}`;
   };
+type Lenguajes = "es"|"en"|"fr"
 export const VehicleCard = ({
   itemsToShow,
   dates,
@@ -29,7 +32,7 @@ export const VehicleCard = ({
   const whatsappNumber = "+34671222750";
 
   const [selectedVehicle, setSelectedVehicle] = useState<Vehicle | null>(null);
-  const [selectedLanguage, setSelectedLanguage] = useState("es");
+  const [selectedLanguage, setSelectedLanguage] = useState<Lenguajes>("es");
   const [numeroFoto, setNumeroFoto] = useState(1);
 
   const handleCardClick = (vehicle: Vehicle) => setSelectedVehicle(vehicle);

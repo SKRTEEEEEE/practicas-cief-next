@@ -8,8 +8,5 @@ export type Vehicle = {
   tipo: string;
   fianza: number;
   precio: number;
-  foto: {
-    1: string;
-    2: string;
-  };
-}
+ foto:  Record<string, string>;
+};
