@@ -11,10 +11,10 @@ export const motos: Vehicle[] = [
       tipo: "moto",
       fianza: 300,
       precio: 50,
-      fotos: [
-        "/img/motos/mh_vince_125.avif",
-        "/img/motos/mh_vince_125_1.avif"
-      ]
+      foto: {
+        1: "/img/motos/mh_vince_125.avif",
+        2: "/img/motos/mh_vince_125_1.avif"
+      }
     },
     {
       nombre: "piagio beverly 125cc",
@@ -26,10 +26,10 @@ export const motos: Vehicle[] = [
       tipo: "moto",
       fianza: 300,
       precio: 50,
-      fotos: [
+      foto: {
         "/img/motos/piaggio_beverly_125.avif",
         "/img/motos/piaggio_beverly_125_1.avif"
-      ]
+      }
     },
     {
       nombre: "sym jet 14 125cc",
@@ -41,10 +41,10 @@ export const motos: Vehicle[] = [
       tipo: "moto",
       fianza: 300,
       precio: 50,
-      fotos: [
-        "/img/motos/sym_jet_14_125.png",
-        "/img/motos/sym_jet_14_125_1.png"
-      ]
+      foto: {
+        1: "/img/motos/sym_jet_14_125.png",
+        2: "/img/motos/sym_jet_14_125_1.png"
+      }
     },
     {
       nombre: "benelli trk 502cc",
@@ -56,10 +56,10 @@ export const motos: Vehicle[] = [
       tipo: "moto",
       fianza: 800,
       precio: 90,
-      fotos: [
-        "/img/motos/benelli_trk_502_x.avif",
-        "/img/motos/benelli_trk_502_x_2.png"
-      ]
+      foto: {
+        1: "/img/motos/benelli_trk_502_x.avif",
+        2: "/img/motos/benelli_trk_502_x_2.png"
+      }
     },
     {
       nombre: "piaggio medley ABS 2020",
@@ -71,10 +71,10 @@ export const motos: Vehicle[] = [
       tipo: "moto",
       fianza: 300,
       precio: 50,
-      fotos: [
-        "/img/motos/sym_symphony_125_sr.png",
-        "/img/motos/sym_symphony_125_sr_1.png"
-      ]
+      foto: {
+        1: "/img/motos/sym_symphony_125_sr.png",
+        2: "/img/motos/sym_symphony_125_sr_1.png"
+      }
     },
     {
       nombre: "suzuki burgman 125cc",
@@ -86,10 +86,10 @@ export const motos: Vehicle[] = [
       tipo: "moto",
       fianza: 300,
       precio: 50,
-      fotos: [
-        "/img/motos/suzuki_burgman_125.png",
-        "/img/motos/suzuki_burgman_125_1.png"
-      ]
+      foto: {
+        1: "/img/motos/suzuki_burgman_125.png",
+        2: "/img/motos/suzuki_burgman_125_1.png"
+      }
     },
     {
       nombre: "kymco k-xct 125cc",
@@ -101,27 +101,10 @@ export const motos: Vehicle[] = [
       tipo: "moto",
       fianza: 300,
       precio: 50,
-      fotos: [
-        "/img/motos/kymco_k_xct_125.avif",
-        "/img/motos/kymco_k_xct_125_1.avif"
-      ]
-    },
-    {
-      nombre: "honda pcx 125cc",
-      descripcion: {
-        es: "Scooter con un diseño moderno y elegante. Su motor de 125cc, 4 tiempos, permite una conducción suave y económica. Su tecnología de inyección electrónica proporciona un mejor rendimiento y un consumo reducido. Con un peso de 130 kg, es ideal para la ciudad, alcanzando hasta 100 km/h.",
-        en: "Scooter with a modern and elegant design. Its 125cc, 4-stroke engine allows for smooth and economical driving. Its electronic fuel injection technology provides better performance and reduced consumption. Weighing 130 kg, it is ideal for the city, reaching speeds of up to 100 km/h.",
-        fr: "Scooter au design moderne et élégant. Son moteur de 125 cm3, 4 temps, permet une conduite fluide et économique. Sa technologie d'injection électronique offre de meilleures performances et une consommation réduite. Pesant 130 kg, il est idéal pour la ville, atteignant jusqu'à 100 km/h."
-      },
-      tipo: "moto",
-      fianza: 300,
-      precio: 50,
-      fotos: [
-        "/img/motos/honda_pcx_125.avif",
-        "/img/motos/honda_pcx_125_1.avif"
-      ]
+      foto: {
+        1: "/img/motos/kymco_k_xct_125.avif",
+        2: "/img/motos/kymco_k_xct_125_1.avif"
+      }
     }
   ];
-  
-
   

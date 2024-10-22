@@ -1,5 +1,7 @@
+"use client"
+
 import { useState } from 'react'
-import { ChevronLeft, ChevronRight, X } from 'lucide-react'
+import { ChevronLeft, ChevronRight} from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
 import Image from 'next/image'
@@ -7,32 +9,34 @@ import { Vehicle } from '@/types'
 
 
 
-export default function MotoPopup({currentMotorcycle}:{currentMotorcycle: Vehicle}) {
+export default function MotoPopup({ currentMotorcycle }: { currentMotorcycle: Vehicle }) {
   const [isOpen, setIsOpen] = useState(false)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
-  const [currentLanguage, setCurrentLanguage] = useState<"es"|"en"|"fr">('es')
+  const [currentLanguage, setCurrentLanguage] = useState<"es" | "en" | "fr">('es')
+
+  const photoKeys = Object.keys(currentMotorcycle.foto)
 
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) => 
-      (prevIndex + 1) % currentMotorcycle.fotos.length
+      (prevIndex + 1) % photoKeys.length
     )
   }
 
   const prevImage = () => {
     setCurrentImageIndex((prevIndex) => 
-      (prevIndex - 1 + currentMotorcycle.fotos.length) % currentMotorcycle.fotos.length
+      (prevIndex - 1 + photoKeys.length) % photoKeys.length
     )
   }
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
-        <Button variant="outline">Ver detalles</Button>
+        <Button variant="outline">Detalles</Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[700px]">
+      <DialogContent className="sm:max-w-[900px]">
         <div className="relative">
           <Image
-            src={currentMotorcycle.fotos[currentImageIndex]}
+            src={currentMotorcycle.foto[photoKeys[currentImageIndex]]}
             alt={currentMotorcycle.nombre}
             className="w-full h-[400px] object-cover rounded-t-lg"
             width={1200}
@@ -61,25 +65,18 @@ export default function MotoPopup({currentMotorcycle}:{currentMotorcycle: Vehicl
             {currentMotorcycle.descripcion[currentLanguage]}
           </p>
           <div className="flex justify-center space-x-2">
-            {['es', 'en', 'fr'].map((lang)  => (
+            {['es', 'en', 'fr'].map((lang) => (
               <Button
                 key={lang}
                 variant={currentLanguage === lang ? 'default' : 'outline'}
-                onClick={() => setCurrentLanguage(lang as 'es'| 'en'| 'fr')}
+                onClick={() => setCurrentLanguage(lang as 'es' | 'en' | 'fr')}
               >
                 {lang}
               </Button>
             ))}
           </div>
         </div>
-        <Button
-          variant="ghost"
-          size="icon"
-          className="absolute right-4 top-4"
-          onClick={() => setIsOpen(false)}
-        >
-          <X className="h-4 w-4" />
-        </Button>
+       
       </DialogContent>
     </Dialog>
   )

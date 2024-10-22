@@ -1,17 +1,17 @@
-export type Vehicle = {
-  nombre: string;
-  descripcion: {
-    es: string;
-    en: string;
-    fr: string;
-  };
-  tipo: "moto"|"bicicleta";
-  fianza: number;
-  precio: number;
-  fotos:  string[]
-};
+// export type Vehicle = {
+//   nombre: string;
+//   descripcion: {
+//     es: string;
+//     en: string;
+//     fr: string;
+//   };
+//   tipo: "moto"|"bicicleta";
+//   fianza: number;
+//   precio: number;
+//   fotos:  string[]
+// };
 
-export type VehicleOld = {
+export type Vehicle = {
   nombre: string;
   descripcion: 
   {

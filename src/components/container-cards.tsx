@@ -1,14 +1,17 @@
 "use client"
 
 import { useState } from "react";
-import "../../public/css/popup.css";
 import "../../public/css/cards.css";
 import "../../public/css/boton-selector.css"
 
 import data from "../data/data.json"
 
 import Image from "next/image";
-import { VehicleOld } from "@/types";
+import { Vehicle } from "@/types";
+import { IndexCarrousel } from "./index-carous";
+import MotoPopup from "./moto-popup";
+import Link from "next/link";
+import { Button } from "./ui/button";
 const formatDate = (dateString: string) => {
     if (!dateString) return "";
     const [year, month, day] = dateString.split("-");
@@ -20,24 +23,11 @@ const bicicletas = data.filter((item) => item.tipo === "bicicleta");
 
 
 export const ContainerCards = () => {
-    const [show, setShow] = useState("motos"); // Estado para iniciar mostrando las motos
-  //Recoje las fechas como un estado ℹ️
-  const itemsToShow = show === "motos" ? motos : bicicletas;
+    const [show, setShow] = useState("motos"); 
+  const itemsToShow: Vehicle[] = show === "motos" ? motos : bicicletas;
+  const [dates, setDates] = useState<Record<string, string>>({});
 
-  const [selectedVehicle, setSelectedVehicle] = useState<VehicleOld|null>(null);
-  const handleCardClick = (vehicle: VehicleOld) => setSelectedVehicle(vehicle);
-  const closePopup = () => setSelectedVehicle(null);
-  const [selectedLanguage, setSelectedLanguage] = useState<"es"|"en"|"fr">("es");
-  const changeLanguage = (lang: "es"|"en"|"fr") => setSelectedLanguage(lang);
-  const [numeroFoto, setNumeroFoto] = useState(1);
 
-  const [dates, setDates] = useState<Record<string, string>>({}); // Estado para armazenar datas por índice
-
-  const [currentImageIndexes, setCurrentImageIndexes] = useState(
-    new Array(itemsToShow.length).fill(0)
-  );
-
-  // Função para obter a data atual no formato YYYY-MM-DD
   const getCurrentDate = () => {
     const today = new Date();
     const year = today.getFullYear();
@@ -46,14 +36,7 @@ export const ContainerCards = () => {
     return `${year}-${month}-${day}`;
   };
 
-  const fotoChange = (val: number) => {
-    const totalFotos = Object.keys(selectedVehicle?.foto || {}).length;
-    if (val < totalFotos) {
-      return val + 1;
-    } else {
-      return 1;
-    }
-  };
+
   const handleFechaInicioChange = (index:number, value:string) => {
     setDates((prevDates) => ({
       ...prevDates,
@@ -67,32 +50,9 @@ export const ContainerCards = () => {
       [`end-${index}`]: value,
     }));
   };
-  const handleNextPhoto = (index:number, photos: string[]) => {
-    setCurrentImageIndexes((prevIndexes) => {
-      const newIndexes = [...prevIndexes];
-      newIndexes[index] =
-        prevIndexes[index] === photos.length - 1 ? 0 : prevIndexes[index] + 1;
-      return newIndexes;
-    });
-  };
-
-  const handlePreviousPhoto = (index:number, photos:string[]) => {
-    setCurrentImageIndexes((prevIndexes) => {
-      const newIndexes = [...prevIndexes];
-      newIndexes[index] =
-        prevIndexes[index] === 0 ? photos.length - 1 : prevIndexes[index] - 1;
-      return newIndexes;
-    });
-  };
-  
-  
-
-
-
   const handleShowMotos = () => setShow("motos");
   const handleShowBicicletas = () => setShow("bicicletas");
 
-  console.log("idk: ",selectedVehicle?.foto[numeroFoto]||undefined)
   return (
     <div className="disp-container">
         <h2>{show === "motos" ? "Motocicletas" : "Bicicletas"} disponibles</h2>
@@ -115,31 +75,7 @@ export const ContainerCards = () => {
 
             return (
                 <div className="card" key={index}>
-                <div className="image-container">
-                    <Image
-                    height={1000}
-                    width={3000}
-                    className="img-disp"
-                    src={photos[currentImageIndexes[index]]}
-                    alt={item.nombre}
-                    />
-                    {photos.length > 1 && (
-                    <div className="image-controls">
-                        <button
-                        onClick={() => handlePreviousPhoto(index, photos)}
-                        className="btn-control"
-                        >
-                        &#10094;
-                        </button>
-                        <button
-                        onClick={() => handleNextPhoto(index, photos)}
-                        className="btn-control"
-                        >
-                        &#10095;
-                        </button>
-                    </div>
-                    )}
-                </div>
+                  <IndexCarrousel totalItems={itemsToShow.length} photos={photos} index={index} nombre={item.nombre}/>
                 <div className="info-card">
                     <h3 className="h3-disp">{item.nombre}</h3>
 
@@ -155,14 +91,14 @@ export const ContainerCards = () => {
                           const fechaInicio = e.target.value;
                           handleFechaInicioChange(index, fechaInicio);
                           
-                          // Define el mínimo de la fecha de término como la fecha de inicio, solo si el elemento existe
+                          // Define el mínimo de la fecha de término como la fecha de inicio, solo si el elemento existe. ESTA PARTE HAY QUE ELIMINARLA!!⚠️
                           const fechaTerminoInput = document.getElementById(`fechaTermino-${index}`) as HTMLInputElement | null;
                           if (fechaTerminoInput) {
                             fechaTerminoInput.min = fechaInicio;
                           }
                         }}
                         required
-                        min={getCurrentDate()} // Bloqueia datas anteriores a hoje
+                        min={getCurrentDate()} 
                     />
                     <label htmlFor={`fechaTermino-${index}`}>
                         Fecha de termino:
@@ -175,16 +111,18 @@ export const ContainerCards = () => {
                         handleFechaTerminoChange(index, e.target.value)
                         }
                         required
-                        min={dates[`start-${index}`] || getCurrentDate()} // A data de término deve ser posterior à de início
+                        min={dates[`start-${index}`] || getCurrentDate()} 
                     />
                     </div>
 
                     <p className="price-disp">Fianza: {item.fianza} €</p>
                     <p className="price-disp">Precio: {item.precio} €</p>
                 </div>
-                <div className="button-container">
-                    <a
-                    className="btn-disp"
+                <div className="button-container gap-4">
+                    <Button variant="outline" >
+                      
+                    <Link
+                    className="flex text-xl gap-2"
                     href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
                         `${mensajeWhatsapp}`
                     )}`}
@@ -198,71 +136,13 @@ export const ContainerCards = () => {
                         className="icono-wsp"
                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2044px-WhatsApp.svg.png"
                         alt="icono whatsapp"
-                    />
-                    </a>
-                    <a className="btn-disp" onClick={() => handleCardClick(item)}>
-                    Detalles
-                    </a>
+                    /></Link>
+                    </Button>
+                    <MotoPopup currentMotorcycle={item}/>
                 </div>
                 </div>
             );
             })}
-            {/* Popup for selected vehicle */}
-            {selectedVehicle && (
-            <div className="popup">
-                <div className="popup-content">
-                <span className="close-btn" onClick={closePopup}>
-                    X
-                </span>
-                <div className="control-image-popup">
-                    <button
-                    onClick={() => setNumeroFoto(fotoChange(numeroFoto))}
-                    className="popup-btn-control"
-                    >
-                    &#10094;
-                    </button>
-
-                    <Image
-                    height={1000}
-                    width={3000}
-                    src={selectedVehicle.foto[numeroFoto]}
-                    alt={selectedVehicle.nombre}
-                    className="popup-image"
-                    />
-
-                    <button
-                    onClick={() => setNumeroFoto(fotoChange(numeroFoto))}
-                    className="popup-btn-control"
-                    >
-                    &#10095;
-                    </button>
-                </div>
-
-                <h2>{selectedVehicle.nombre}</h2>
-                <p>{selectedVehicle.descripcion[selectedLanguage]}</p>
-                <div className="botones-lang">
-                    <button
-                    className="btn-lang"
-                    onClick={() => changeLanguage("es")}
-                    >
-                    ES
-                    </button>
-                    <button
-                    className="btn-lang"
-                    onClick={() => changeLanguage("en")}
-                    >
-                    EN
-                    </button>
-                    <button
-                    className="btn-lang"
-                    onClick={() => changeLanguage("fr")}
-                    >
-                    FR
-                    </button>
-                </div>
-                </div>
-            </div>
-            )}
         </div>
     </div>
   );
