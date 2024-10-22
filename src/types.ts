@@ -5,8 +5,8 @@ export type Vehicle = {
     en: string;
     fr: string;
   };
-  tipo: string;
+  tipo: "moto"|"bicicleta";
   fianza: number;
   precio: number;
- foto:  Record<string, string>;
+  fotos:  string[]
 };
