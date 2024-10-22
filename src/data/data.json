@@ -1,6 +1,6 @@
 [
   {
-    "nombre": "mh vince 125cc",
+    "nombre": "mh motors vince 125cc",
     "descripcion": {
       "es": "Scooter neo-retro, su estilo vintage se combina con las soluciones tecnológicas más actuales. Diseñada para ofrecer la máxima eficiencia con un consumo mínimo de combustible de 2,8 litros a los 100 km. Con un peso de 115 kg la convierte en una motocicleta muy ágil y con una amplia manejabilidad, especialmente para conducción urbana.",
       "en": "Neo-retro scooter, its vintage style is combined with the most up-to-date technological solutions. Designed to offer maximum efficiency with a minimum fuel consumption of 2.8 liters per 100 km. With a weight of 115 kg it makes it a very agile motorcycle with ample handling, especially for urban driving.",
@@ -15,7 +15,7 @@
   }
   },
   {
-    "nombre": "piagio bervely 125cc",
+    "nombre": "piagio beverly 125cc",
     "descripcion": {
       "es": "Piaggio Bervely 125cc, es un scooter urbano diseñado para ofrecer comodidad, eficiencia y estilo. Este modelo se caracteriza por su motor de 125cc, 4 tiempos, refrigerado por líquido, que proporciona un buen equilibrio entre potencia y consumo de combustible, ideal para los desplazamientos diarios por la ciudad.",
       "en": "Piaggio Bervely 125cc, is an urban scooter designed to offer comfort, efficiency and style. This model is characterized by its 125cc, 4-stroke, liquid-cooled engine, which provides a good balance between power and fuel consumption, ideal for daily commuting around the city.",
@@ -45,7 +45,7 @@
   }
   },
   {
-    "nombre": "benelli trk 502",
+    "nombre": "benelli trk 502cc",
     "descripcion": {
       "es": "Motor bicilíndrico de 4 tiempos refrigerado por agua, que entrega 48 CV de potencia. Perfecto para el carnet A2. 47,6 CV a 8.500 rpm y una velocidad máxima de 175 km/h. especialmente para rutas extraurbanas.",
       "en": "4-stroke, water-cooled, twin-cylinder engine, delivering 48 HP. Perfect for the A2 license. 47.6 HP at 8500 rpm with a maximum speed of 175 km/h. Especially for extra-urban routes.",
@@ -60,7 +60,7 @@
   }
   },
   {
-    "nombre": "sym symphony sr 125",
+    "nombre": "piaggio medley ABS 2020",
     "descripcion": {
       "es": "Su motor Euro 5 garantiza unas excelentes prestaciones, un consumo mínimo y bajas emisiones para circular por ciudad de forma sostenible. El motor de 12 CV a 7500 rpm ofrece una velocidad máxima de 105 km/h. Ofrece suficiente espacio debajo del asiento y por si fuera poco, lleva integrado un baúl superior.",
       "en": "Its Euro 5 engine guarantees excellent performance, minimum fuel consumption and low emissions to move around the city in a sustainable way. The 12 HP engine at 7500 rpm offers a maximum speed of 105 km/h. It offers ample space under the seat and if that is not enough, it has a built-in top case.",
@@ -75,7 +75,7 @@
   }
   },
   {
-    "nombre": "suzuki burgman 125",
+    "nombre": "suzuki burgman 125cc",
     "descripcion":{
       "es": "Burgman 125cc, compacta y ágil, para circular eficientemente por las carreteras de las grandes ciudades, proporcionando una conducción totalmente eficiente. Tiene una potencia de 8,6 CV y ​​alcanza fácilmente una velocidad máxima de 120 km/h, aportando estabilidad en todo momento gracias a su peso.",
       "en": "Burgman 125cc, compact and agile, to efficiently travel the roads of large cities, offering a totally efficient driving. It has a power of 8.6 HP and reaches a maximum speed of 120 km/h with ease, and offering stability at all times thanks to its weight.",
@@ -90,7 +90,7 @@
   }
   },
   {
-    "nombre": "kymco k-xct 125",
+    "nombre": "kymco k-xct 125cc",
     "descripcion": {
       "es": "Es una scooter de 125cc, con un estilo deportivo, ideal tanto para uso en ciudad como para salidas extraurbanas. Motor de 4 tiempos con una potencia máxima de 14,5 CV a 9.000 rpm. capaz de alcanzar una velocidad máxima de 117 km/h.",
       "en": "It is a 125cc, sporty style scooter, ideal for use in the city as well as for extra-urban trips. 4-stroke engine with a maximum power of 14.5 HP at 9000 rpm. It can reach a maximum speed of 117 km/h.",
@@ -105,7 +105,7 @@
   }
   },
   {
-    "nombre": "yamaha n-max 125",
+    "nombre": "yamaha n-max 125cc",
     "descripcion": {
       "es": "La carrocería deportiva y dinámica del N-max 125cc cuenta con elegantes luces LED delanteras y traseras. Carenado aerodinámico que ofrece una mejor protección contra el viento y la lluvia. La ergonomía y la maniobrabilidad le permiten moverse cómodamente. Moto de 125cc con 12,2 CV, que puede alcanzar una velocidad de 117 km/h.",
       "en": "The sporty and dynamic bodywork of the N-max 125cc, has elegant front and rear LED lights. Aerodynamic fairing that offers greater protection against wind and rain. Ergonomics and maneuverability make it comfortable to move with. 125cc motorcycle with 12.2 HP, which allows it to reach a speed of 117 km / h.",
@@ -120,7 +120,7 @@
   }
   },
   {
-    "nombre": "peugeot tweet gt 50",
+    "nombre": "peugeot tweet gt 50cc",
     "descripcion": {
       "es": "Scooter de 50 cc, considerado el mejor ciclomotor de ruedas altas en cuanto a maniobrabilidad y ligereza. Motor de 3CV, que le permite alcanzar una velocidad máxima de 50km/h.",
       "en": "50cc scooter, considered the best high-wheeled moped in terms of maneuverability and lightness. 3CV engine, which allows it to reach a maximum speed of 50km/h.",
@@ -134,21 +134,7 @@
       "2": "/img/motos/peugeot_tweet_50_gt_1.png"
   }
   },
-  {
-    "nombre": "daelim s3 125",
-    "descripcion": {
-      "es": "Scooter versátil y moderno con un diseño innovador. Motor de 125cc de 4 tiempos con inyección electrónica y refrigeración líquida. ideal para grandes ciudades y zonas extraurbanas. Tiene una potencia de 14CV, lo que le permite alcanzar una velocidad de 120km/h.",
-      "en": "versatile, modern scooter with a novel design. 125cc 4-stroke liquid-cooled, electronically-injected engine. Ideal for large cities and extra-urban areas. It has a power of 14HP, which allows it to reach a speed of 120km/h.",
-      "fr": "Scooter polyvalent et moderne au design novateur. Moteur 125cc 4 temps à injection électronique et refroidissement liquide. idéal pour les grandes villes et les zones extra-urbaines. Il a une puissance de 14CV, ce qui lui permet d'atteindre une vitesse de 120km/h."
-    },
-    "tipo": "moto",
-    "fianza": 300,
-    "precio": 50,
-    "foto":{
-      "1": "/img/motos/daelim_s3_125.png",
-      "2": "/img/motos/daelim_s3_125_1.png"
-  }
-  }, 
+
   {
     "nombre": "Bicicleta de Montanha",
     "descripcion": {
