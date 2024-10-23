@@ -66,9 +66,8 @@ export default function ContainerCards() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {itemsToShow.map((item, index) => {
-          const mensajeWhatsapp = `Hola, me gustaría saber más sobre el ${
-            item.nombre
-          }.
+          const mensajeWhatsapp = `Hola, me gustaría saber más sobre el ${item.nombre
+            }.
           Fecha de inicio: ${formatDate(dates[`start-${index}`]) || ""}
           Fecha de término: ${formatDate(dates[`end-${index}`]) || ""}`;
           const photos = Object.values(item.foto);
@@ -80,37 +79,45 @@ export default function ContainerCards() {
                   <Image
                     src={photos[0]}
                     alt={item.nombre}
-                    className="object-cover w-full h-full"
-                    width={1000}
-                    height={300}
+                    className="object-contain h-[80%] "  
+                    width={1000} 
+                    height={300} 
                   />
                 </div>
               </CardHeader>
               <CardContent className="flex-grow p-4">
                 <CardTitle className="text-lg font-bold mb-2">{item.nombre}</CardTitle>
-                <div className="fecha-container">
-                  <label htmlFor={`fechaInicio-${index}`}>
-                    Fecha de inicio:
-                  </label>
-                  <input
-                    type="date"
-                    id={`fechaInicio-${index}`}
-                    value={dates[`start-${index}`] || ""}
-                    onChange={(e) => handleFechaInicioChange(index, e.target.value)}
-                    required
-                    min={getCurrentDate()} 
-                  />
-                  <label htmlFor={`fechaTermino-${index}`}>
-                    Fecha de termino:
-                  </label>
-                  <input
-                    type="date"
-                    id={`fechaTermino-${index}`}
-                    value={dates[`end-${index}`] || ""}
-                    onChange={(e) => handleFechaTerminoChange(index, e.target.value)}
-                    required
-                    min={dates[`start-${index}`] || getCurrentDate()} 
-                  />
+                <div className="flex justify-between">
+
+
+                  <div className="mt-4">
+                    <p className="text-2xl mb-2">Precio: {item.precio} €</p>
+                    <p className="">Fianza: {item.fianza} €</p>
+                  </div>
+                  <div className="fecha-container">
+                    <label htmlFor={`fechaInicio-${index}`}>
+                      Fecha de inicio:
+                    </label>
+                    <input
+                      type="date"
+                      id={`fechaInicio-${index}`}
+                      value={dates[`start-${index}`] || ""}
+                      onChange={(e) => handleFechaInicioChange(index, e.target.value)}
+                      required
+                      min={getCurrentDate()}
+                    />
+                    <label htmlFor={`fechaTermino-${index}`}>
+                      Fecha de termino:
+                    </label>
+                    <input
+                      type="date"
+                      id={`fechaTermino-${index}`}
+                      value={dates[`end-${index}`] || ""}
+                      onChange={(e) => handleFechaTerminoChange(index, e.target.value)}
+                      required
+                      min={dates[`start-${index}`] || getCurrentDate()}
+                    />
+                  </div>
                 </div>
               </CardContent>
               <CardFooter className="p-4 pt-0">
@@ -122,11 +129,11 @@ export default function ContainerCards() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Image src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" className="icono-wsp" width={1000} height={300}/>
+                      <Image src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" className="icono-wsp" width={1000} height={300} />
                       <span className="lg:hidden sm:inline xl:inline">Reservar</span>
                     </Link>
                   </Button>
-                  <MotoPopup currentMotorcycle={item}/>
+                  <MotoPopup currentMotorcycle={item} />
                 </div>
               </CardFooter>
             </Card>

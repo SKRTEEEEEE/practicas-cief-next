@@ -35,13 +35,14 @@ export default function MotoPopup({ currentMotorcycle }: { currentMotorcycle: Ve
       </DialogTrigger>
       <DialogContent className="sm:max-w-[900px]">
         <div className="relative">
+          <div className="flex justify-center">
           <Image
             src={currentMotorcycle.foto[photoKeys[currentImageIndex]]}
             alt={currentMotorcycle.nombre}
-            className="w-full h-[400px] object-cover rounded-t-lg"
-            width={1200}
-            height={400}
-          />
+            className="w-[80%] h-auto object-contain rounded-t-lg"
+            width={600}
+            height={200}
+          /></div>
           <Button
             variant="ghost"
             size="icon"
