@@ -10,12 +10,12 @@
     "fianza": 300,
     "precio": 50,
     "foto":{
-      "1": "/img/motos/mh_vince_125.avif",
+      "1": "/img/motos_sin_fondo/MH_Motors_Vince_125cc_2023.-removebg-preview-removebg-preview.png",
       "2": "/img/motos/mh_vince_125_1.avif"
   }
   },
   {
-    "nombre": "piagio beverly 125cc.",
+    "nombre": "piaggio beverly 125cc.",
     "descripcion": {
       "es": "Piaggio Bervely 125cc, es un scooter urbano diseñado para ofrecer comodidad, eficiencia y estilo. Este modelo se caracteriza por su motor de 125cc, 4 tiempos, refrigerado por líquido, que proporciona un buen equilibrio entre potencia y consumo de combustible, ideal para los desplazamientos diarios por la ciudad.",
       "en": "Piaggio Bervely 125cc, is an urban scooter designed to offer comfort, efficiency and style. This model is characterized by its 125cc, 4-stroke, liquid-cooled engine, which provides a good balance between power and fuel consumption, ideal for daily commuting around the city.",
@@ -25,7 +25,7 @@
     "fianza": 300,
     "precio": 50,
     "foto":{
-      "1": "/img/motos/piaggio_beverly_125.avif",
+      "1": "/img/motos_sin_fondo/Piaggio_Beverly_125cc_2017.-removebg-preview.png",
       "2": "/img/motos/piaggio_beverly_125_1.avif"
   }
   },
@@ -40,7 +40,7 @@
     "fianza": 300,
     "precio": 50,
     "foto":{
-      "1": "/img/motos/sym_jet_14_125.png",
+      "1": "/img/motos_sin_fondo/SYM_JET_14_125cc_2022-removebg-preview.png",
       "2": "/img/motos/sym_jet_14_125_1.png"
   }
   },
@@ -55,7 +55,7 @@
     "fianza": 800,
     "precio": 90,
     "foto":{
-      "1": "/img/motos/benelli_trk_502_x.avif",
+      "1": "/img/motos_sin_fondo/Benelli_TRK_502cc_2021.-removebg-preview.png",
       "2": "/img/motos/benelli_trk_502_x_2.png"
   }
   },
@@ -70,7 +70,7 @@
     "fianza": 300,
     "precio": 50,
     "foto":{
-      "1": "/img/motos/sym_symphony_125_sr.png",
+      "1": "/img/motos_sin_fondo/Piaggio_Medley_ABS_2020.-removebg-preview.png",
       "2": "/img/motos/sym_symphony_125_sr_1.png"
   }
   },
@@ -85,7 +85,7 @@
     "fianza": 300,
     "precio": 50,
     "foto":{
-      "1": "/img/motos/suzuki_burgman_125.png",
+      "1": "/img/motos_sin_fondo/Suzuki_Burgman_125cc_2015.-removebg-preview.png",
       "2": "/img/motos/suzuki_burgman_125_1.png"
   }
   },
@@ -100,7 +100,7 @@
     "fianza": 300,
     "precio": 50,
     "foto":{
-      "1": "/img/motos/kymco_k-xct_125.png",
+      "1": "/img/motos_sin_fondo/kymco_kxct_125cc_2016.-removebg-preview.png",
       "2": "/img/motos/kymco_k-xct_125_2.png"
   }
   },
@@ -115,7 +115,7 @@
     "fianza": 300,
     "precio": 50,
     "foto":{
-      "1": "/img/motos/yamaha_n-max_125.avif",
+      "1": "/img/motos_sin_fondo/Yamaha_N-max_125cc_2022_.-removebg-preview.png",
       "2": "/img/motos/yamaha_n-max_125_1.avif"
   }
   },
@@ -130,7 +130,7 @@
     "fianza": 300,
     "precio": 35,
     "foto":{
-      "1": "/img/motos/peugeot_tweet_50_gt.png",
+      "1": "/img/motos_sin_fondo/Peugeot_Tweet_GT_50cc_2018.-removebg-preview.png",
       "2": "/img/motos/peugeot_tweet_50_gt_1.png"
   }
   },

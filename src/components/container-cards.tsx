@@ -1,32 +1,32 @@
 "use client"
 
-import { useState } from "react";
+import React, { useState, useMemo } from "react";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card";
+import { Button } from "./ui/button";
+import Image from "next/image";
+import { Vehicle } from "@/types";
+import Link from "next/link";
+import MotoPopup from "./moto-popup";
+import data from "../data/data.json"
 import "../../public/css/cards.css";
 import "../../public/css/boton-selector.css"
 
-import data from "../data/data.json"
+export default function ContainerCards() {
+  const [show, setShow] = useState("motos");
+  const [dates, setDates] = useState<Record<string, string>>({});
 
-import Image from "next/image";
-import { Vehicle } from "@/types";
-import { IndexCarrousel } from "./index-carous";
-import MotoPopup from "./moto-popup";
-import Link from "next/link";
-import { Button } from "./ui/button";
-const formatDate = (dateString: string) => {
+  const motos = useMemo(() => data.filter((item) => item.tipo === "moto"), []);
+  const bicicletas = useMemo(() => data.filter((item) => item.tipo === "bicicleta"), []);
+
+  const itemsToShow: Vehicle[] = show === "motos" ? motos : bicicletas;
+
+  const formatDate = (dateString: string) => {
     if (!dateString) return "";
     const [year, month, day] = dateString.split("-");
     return `${day}-${month}-${year}`;
   };
-const whatsappNumber = "+34671222750";
-const motos = data.filter((item) => item.tipo === "moto");
-const bicicletas = data.filter((item) => item.tipo === "bicicleta");
 
-
-export const ContainerCards = () => {
-    const [show, setShow] = useState("motos"); 
-  const itemsToShow: Vehicle[] = show === "motos" ? motos : bicicletas;
-  const [dates, setDates] = useState<Record<string, string>>({});
-
+  const whatsappNumber = "+34671222750";
 
   const getCurrentDate = () => {
     const today = new Date();
@@ -36,114 +36,103 @@ export const ContainerCards = () => {
     return `${year}-${month}-${day}`;
   };
 
-
-  const handleFechaInicioChange = (index:number, value:string) => {
+  const handleFechaInicioChange = (index: number, value: string) => {
     setDates((prevDates) => ({
       ...prevDates,
       [`start-${index}`]: value,
     }));
   };
 
-  const handleFechaTerminoChange = (index:number, value:string) => {
+  const handleFechaTerminoChange = (index: number, value: string) => {
     setDates((prevDates) => ({
       ...prevDates,
       [`end-${index}`]: value,
     }));
   };
+
   const handleShowMotos = () => setShow("motos");
   const handleShowBicicletas = () => setShow("bicicletas");
 
   return (
-    <div className="disp-container">
-        <h2>{show === "motos" ? "Motocicletas" : "Bicicletas"} disponibles</h2>
-        <div className="selector-vehiculos">
-          <button className="button-motos" onClick={handleShowMotos}>
-            Motos
-          </button>
-          <button className="button-bicis" onClick={handleShowBicicletas}>
-            Bicicletas
-          </button>
-        </div>
-        <div className="flex flex-wrap w-full justify-evenly ">
-            {itemsToShow.map((item, index) => {
-            const photos = Object.values(item.foto);
-            const mensajeWhatsapp = `Hola, me gustaría saber más sobre el ${
-                item.nombre
-            }.
-            Fecha de inicio: ${formatDate(dates[`start-${index}`]) || ""}
-            Fecha de término: ${formatDate(dates[`end-${index}`]) || ""}`;
+    <div className="container mx-auto p-4">
+      <h2>{show === "motos" ? "Motocicletas" : "Bicicletas"} disponibles</h2>
+      <div className="selector-vehiculos">
+        <button className="button-motos" onClick={handleShowMotos}>
+          Motos
+        </button>
+        <button className="button-bicis" onClick={handleShowBicicletas}>
+          Bicicletas
+        </button>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {itemsToShow.map((item, index) => {
+          const mensajeWhatsapp = `Hola, me gustaría saber más sobre el ${
+            item.nombre
+          }.
+          Fecha de inicio: ${formatDate(dates[`start-${index}`]) || ""}
+          Fecha de término: ${formatDate(dates[`end-${index}`]) || ""}`;
+          const photos = Object.values(item.foto);
 
-            return (
-                <div className="card" key={index}>
-                  <IndexCarrousel totalItems={itemsToShow.length} photos={photos} index={index} nombre={item.nombre}/>
-                <div className="info-card">
-                    <h3 className="h3-disp">{item.nombre}</h3>
-
-                    <div className="fecha-container">
-                    <label htmlFor={`fechaInicio-${index}`}>
-                        Fecha de inicio:
-                    </label>
-                    <input
-                        type="date"
-                        id={`fechaInicio-${index}`}
-                        value={dates[`start-${index}`] || ""}
-                        onChange={(e) => {
-                          const fechaInicio = e.target.value;
-                          handleFechaInicioChange(index, fechaInicio);
-                          
-                          // Define el mínimo de la fecha de término como la fecha de inicio, solo si el elemento existe. ESTA PARTE HAY QUE ELIMINARLA!!⚠️
-                          const fechaTerminoInput = document.getElementById(`fechaTermino-${index}`) as HTMLInputElement | null;
-                          if (fechaTerminoInput) {
-                            fechaTerminoInput.min = fechaInicio;
-                          }
-                        }}
-                        required
-                        min={getCurrentDate()} 
-                    />
-                    <label htmlFor={`fechaTermino-${index}`}>
-                        Fecha de termino:
-                    </label>
-                    <input
-                        type="date"
-                        id={`fechaTermino-${index}`}
-                        value={dates[`end-${index}`] || ""}
-                        onChange={(e) =>
-                        handleFechaTerminoChange(index, e.target.value)
-                        }
-                        required
-                        min={dates[`start-${index}`] || getCurrentDate()} 
-                    />
-                    </div>
-
-                    <p className="price-disp">Fianza: {item.fianza} €</p>
-                    <p className="price-disp">Precio: {item.precio} €</p>
+          return (
+            <Card key={`${item.tipo}-${item.nombre}-${index}`} className="flex flex-col">
+              <CardHeader className="p-0">
+                <div className="aspect-[3/2] relative overflow-hidden rounded-t-lg">
+                  <Image
+                    src={photos[0]}
+                    alt={item.nombre}
+                    className="object-cover w-full h-full"
+                    width={1000}
+                    height={300}
+                  />
                 </div>
-                <div className="button-container gap-4">
-                    <Button variant="outline" >
-                      
+              </CardHeader>
+              <CardContent className="flex-grow p-4">
+                <CardTitle className="text-lg font-bold mb-2">{item.nombre}</CardTitle>
+                <div className="fecha-container">
+                  <label htmlFor={`fechaInicio-${index}`}>
+                    Fecha de inicio:
+                  </label>
+                  <input
+                    type="date"
+                    id={`fechaInicio-${index}`}
+                    value={dates[`start-${index}`] || ""}
+                    onChange={(e) => handleFechaInicioChange(index, e.target.value)}
+                    required
+                    min={getCurrentDate()} 
+                  />
+                  <label htmlFor={`fechaTermino-${index}`}>
+                    Fecha de termino:
+                  </label>
+                  <input
+                    type="date"
+                    id={`fechaTermino-${index}`}
+                    value={dates[`end-${index}`] || ""}
+                    onChange={(e) => handleFechaTerminoChange(index, e.target.value)}
+                    required
+                    min={dates[`start-${index}`] || getCurrentDate()} 
+                  />
+                </div>
+              </CardContent>
+              <CardFooter className="p-4 pt-0">
+                <div className="flex justify-between gap-4 w-full">
+                  <Button variant="outline" className="flex-1 ">
                     <Link
-                    className="flex text-xl gap-2"
-                    href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-                        `${mensajeWhatsapp}`
-                    )}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                      className="flex text-xl gap-2"
+                      href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(mensajeWhatsapp)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                    Reservar{" "}
-                    <Image
-                    height={1000}
-                    width={3000}
-                        className="icono-wsp"
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2044px-WhatsApp.svg.png"
-                        alt="icono whatsapp"
-                    /></Link>
-                    </Button>
-                    <MotoPopup currentMotorcycle={item}/>
+                      <Image src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" className="icono-wsp" width={1000} height={300}/>
+                      <span className="lg:hidden sm:inline xl:inline">Reservar</span>
+                    </Link>
+                  </Button>
+                  <MotoPopup currentMotorcycle={item}/>
                 </div>
-                </div>
-            );
-            })}
-        </div>
+              </CardFooter>
+            </Card>
+          );
+        })}
+      </div>
     </div>
   );
-};
+}
