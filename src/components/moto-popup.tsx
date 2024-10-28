@@ -39,7 +39,7 @@ export default function MotoPopup({ currentMotorcycle }: { currentMotorcycle: Ve
           <Image
             src={currentMotorcycle.foto[photoKeys[currentImageIndex]]}
             alt={currentMotorcycle.nombre}
-            className="w-[80%] h-auto object-contain rounded-t-lg"
+            className="w-[50%] h-auto object-contain rounded-t-lg"
             width={600}
             height={200}
           /></div>
